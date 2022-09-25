@@ -53,10 +53,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 
 function canWeDeliver (zipzode){
-    
-}
-
-
+//for (let i = 0; deliveryAreaZipCodes.length > i; i++){
+    if (deliveryAreaZipCodes % 2 === 0){
+     return "you're in our delivery zone"
+} else {
+    return `Sorry, we can't deliver to that address`
+    }
+  }
+//}
+console.log(canWeDeliver(deliveryAreaZipCodes));
 /* 
     Problem 2 Continued
 
@@ -110,7 +115,6 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
 
 
 

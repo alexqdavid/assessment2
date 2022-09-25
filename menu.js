@@ -13,11 +13,11 @@
     Create an object called `pizza` that has 6
     properties: 
         - name (string)
-        - price (number)
-        - category (string)
-        - popularity (number)
-        - rating (number)
-        - tags (array of strings)
+         price: (number)
+         category: (string)
+         popularity: (number)
+         rating: (number)
+         tags: (array of strings)
 
     Make sure that you give your properties values
     of the correct data type.
@@ -31,6 +31,13 @@
 */
 
 
+let pizza = {}
+    pizza['Name'] = "cheese";
+    pizza['price'] = 1.99;
+    pizza['category'] = "vegan";
+    pizza['popularity'] = 1;
+    pizza['rating'] = 10;
+    pizza['tags'] = "kids";
 
 
 
@@ -42,8 +49,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
-
+console.log(pizza['popularity']);
 
 /*
     Second, log the second tag in your pizza's
@@ -52,7 +58,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza['tags']);
 
 
 /*
@@ -62,7 +68,8 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+pizza.price = 2
+console.log(pizza);
 
 
 /*
@@ -72,7 +79,7 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+console.log(pizza['category']);
 
 
 //////////////////PROBLEM 3////////////////////
@@ -87,8 +94,38 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
 
+let foodArr =[ {
+    name: "ham_cheese",
+    category: "classic",
+    popularity: 2,
+    rating: 9.1,
+    tags: ["meaty"]
+},{
+    name: "bacon_cheese",
+    category: "meat_Lovers",
+    popularity: 3,
+    rating: 9,
+    tags: ["meaty"]
+},{
+    name: "cheese",
+    category: "regular",
+    popularity: 4,
+    rating: 8,
+    tags: ["veg"]
+},{
+    name: "chicken_cheese",
+    category: "poultry",
+    popularity: 5,
+    rating: 8.5,
+    tags: ["meaty"]
+},{
+    name: "mushroom_cheese",
+    category: "plain",
+    popularity: 6,
+    rating: 9.9,
+    tags: ["veg"]
+},]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -103,9 +140,22 @@
     your food objects has.
 */
 
-//CODE HERE
-
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+food = (array, requiredtag) => {
+    let result = []
+    array.forEach(element => {
+    element.tags.forEach(tag => {
+    if (tag == requiredtag)
+    result.push(element)
+    });
+  });
+return result
+}
+let result = []
+result = food(foodArr, 'veg');
+if (result.length > 0)
+console.log(result);
+else  
+console.log("No item found for the given tag");
 
 
 
@@ -148,7 +198,7 @@
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+
 
 
 /*
